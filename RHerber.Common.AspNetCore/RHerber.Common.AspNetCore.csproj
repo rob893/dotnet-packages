@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <LangVersion>9</LangVersion>
+    <PackageId>RHerber.Common.AspNetCore</PackageId>
+    <RootNamespace>RHerber.Common.AspNetCore</RootNamespace>
+    <Version>1.1.0</Version>
+    <Nullable>enable</Nullable>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <Authors>Robert Herber</Authors>
+    <PackageDescription>This package contains common classes I use throughout my projects.</PackageDescription>
+    <RepositoryUrl>https://github.com/rob893/dotnet-packages</RepositoryUrl>
+    <Copyright>Copyright (c) 2021 Robert Herber. All rights reserved.</Copyright>
+    <PackageReleaseNotes>
+      1.0.0 - Initial Release.
+      1.1.0 - Add primitive extensions.
+    </PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0"/>
+  </ItemGroup>
+</Project>

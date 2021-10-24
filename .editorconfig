@@ -237,6 +237,9 @@ dotnet_diagnostic.CA5394.severity = none
 # Avoid uninstantiated internal classes.
 # Disabled as many internal classes are created through reflection.
 dotnet_diagnostic.CA1812.severity = none
+# Mark assemblies with CLSCompliant.
+# Disabled because I want to.
+dotnet_diagnostic.CA1014.severity = none
 
 
 [/WoWMarketWatcher.API.Test/**]

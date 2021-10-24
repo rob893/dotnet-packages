@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace RHerber.Utilities.Collections
+namespace RHerber.Common.Collections
 {
     public sealed class CursorPaginatedList<TEntity, TEntityKey> : IEnumerable<TEntity>
         where TEntity : class

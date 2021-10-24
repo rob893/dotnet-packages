@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <LangVersion>9</LangVersion>
+    <PackageId>RHerber.Common.EntityFrameworkCore</PackageId>
+    <RootNamespace>RHerber.Common.EntityFrameworkCore</RootNamespace>
+    <Version>1.0.0</Version>
+    <Nullable>enable</Nullable>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <Authors>Robert Herber</Authors>
+    <PackageDescription>This package contains EF Core utilities.</PackageDescription>
+    <RepositoryUrl>https://github.com/rob893/dotnet-packages</RepositoryUrl>
+    <Copyright>Copyright (c) 2021 Robert Herber. All rights reserved.</Copyright>
+    <PackageReleaseNotes>
+      1.0.0 - Initial Release.
+    </PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.11" />
+    <PackageReference Include="RHerber.Common" Version="1.1.0" />
+    <PackageReference Include="RHerber.Common.AspNetCore" Version="1.1.0" />
+  </ItemGroup>
+</Project>
