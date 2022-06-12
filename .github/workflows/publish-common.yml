@@ -20,9 +20,23 @@ jobs:
         with:
           dotnet-version: "6.0.x"
 
-      - name: Publish on Version Change
-        uses: brandedoutcast/publish-nuget@v2
+      - name: Get Project Version
+        uses: kzrnm/get-net-sdk-project-versions-action@v1
+        id: get-version
         with:
-          PROJECT_FILE_PATH: RHerber.Common/RHerber.Common.csproj
-          NUGET_KEY: ${{ secrets.GITHUB_TOKEN }}
-          NUGET_SOURCE: https://nuget.pkg.github.com/rob893
+          proj-path: RHerber.Common/RHerber.Common.csproj
+      - run: echo "${{steps.get-version.outputs.version}}"
+      - run: echo "${{steps.get-version.outputs.version-prefix}}" 
+      - run: echo "${{steps.get-version.outputs.version-suffix}}" 
+      - run: echo "${{steps.get-version.outputs.package-version}}" 
+      - run: echo "${{steps.get-version.outputs.assembly-version}}" 
+      - run: echo "${{steps.get-version.outputs.file-version}}" 
+      - run: echo "${{steps.get-version.outputs.informational-version}}"
+
+      - name: Pack
+        run: cd RHerber.Common && dotnet pack --configuration Release
+
+      - name: Push Package
+        run: |
+          cd RHerber.Common && 
+          dotnet nuget push "bin/Release/RHerber.Common.${{ steps.get-version.outputs.version }}.nupkg"  --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
