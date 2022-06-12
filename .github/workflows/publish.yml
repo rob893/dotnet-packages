@@ -14,9 +14,6 @@ on:
         required: false
         default: "6.0.x"
 
-env:
-  GITHUB_USERNAME: rob893
-
 jobs:
   publish:
     name: Build, Pack and Publish
@@ -35,6 +32,9 @@ jobs:
         id: get-version
         with:
           proj-path: ${{ inputs.project-path }}/${{ inputs.project-name }}.csproj
+
+      - name: Add Github Packages Registry
+        run: dotnet nuget add source --username rob893 --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/rob893/index.json"
 
       - name: Pack
         run: cd ${{ inputs.project-path }} && dotnet pack --configuration Release
