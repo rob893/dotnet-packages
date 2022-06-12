@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-    paths:
-      - "RHerber.Common.EntityFrameworkCore/**"
+    # paths:
+    #   - "RHerber.Common.EntityFrameworkCore/**"
 
 jobs:
   publish:
