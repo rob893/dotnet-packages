@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-    paths:
-      - "RHerber.Common/**"
+    # paths:
+    #   - "RHerber.Common/**"
 
 jobs:
   publish:
@@ -24,6 +24,5 @@ jobs:
         uses: brandedoutcast/publish-nuget@v2
         with:
           PROJECT_FILE_PATH: RHerber.Common/RHerber.Common.csproj
-          BUILD_CONFIGURATION: Release
           NUGET_KEY: ${{ secrets.GITHUB_TOKEN }}
           NUGET_SOURCE: github
