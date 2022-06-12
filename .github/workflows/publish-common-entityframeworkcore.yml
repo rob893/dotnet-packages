@@ -9,7 +9,7 @@ on:
 
 jobs:
   publish:
-    uses: ./.github/workflows/publish
+    uses: ./.github/workflows/publish.yml
     with:
       project-path: RHerber.Common.EntityFrameworkCore
       project-name: RHerber.Common.EntityFrameworkCore
