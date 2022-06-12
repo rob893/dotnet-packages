@@ -4,7 +4,7 @@
     <LangVersion>10</LangVersion>
     <PackageId>RHerber.Common.AspNetCore</PackageId>
     <RootNamespace>RHerber.Common.AspNetCore</RootNamespace>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
     <Nullable>enable</Nullable>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
@@ -16,6 +16,7 @@
     <PackageReleaseNotes>
       1.0.0 - Initial Release.
       1.1.0 - Add primitive extensions.
+      1.2.0 - Upgrade to net6.
     </PackageReleaseNotes>
   </PropertyGroup>
 
