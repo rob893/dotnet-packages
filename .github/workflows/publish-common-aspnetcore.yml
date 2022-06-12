@@ -5,11 +5,11 @@ on:
     branches:
       - master
     paths:
-      - "RHerber.Common/**"
+      - "RHerber.Common.AspNetCore/**"
 
 jobs:
   publish:
     uses: ./.github/workflows/publish
     with:
-      project-path: RHerber.Common
-      project-name: RHerber.Common
+      project-path: RHerber.Common.AspNetCore
+      project-name: RHerber.Common.AspNetCore

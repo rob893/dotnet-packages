@@ -1,0 +1,42 @@
+name: publish to nuget
+
+on:
+  workflow_call:
+    inputs:
+      project-path:
+        type: string
+        required: true
+      project-name:
+        type: string
+        required: true
+      dotnet-version:
+        type: string
+        required: false
+        default: "6.0.x"
+
+jobs:
+  publish:
+    name: Build, Pack and Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Use Dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ inputs.dotnet-version }}
+
+      - name: Get Project Version
+        uses: kzrnm/get-net-sdk-project-versions-action@v1
+        id: get-version
+        with:
+          proj-path: ${{ inputs.project-path }}/${{ inputs.project-name }}.csproj
+
+      - name: Pack
+        run: cd ${{ inputs.project-path }} && dotnet pack --configuration Release
+
+      - name: Push Package
+        run: |
+          cd ${{ inputs.project-path }} && 
+          dotnet nuget push "bin/Release/${{ inputs.project-name }}.${{ steps.get-version.outputs.version }}.nupkg"  --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
