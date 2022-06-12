@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RHerber.Common", "RHerber.Common\RHerber.Common.csproj", "{1E563628-886B-4965-8BDC-9119A54AF2A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RHerber.Common.AspNetCore", "RHerber.Common.AspNetCore\RHerber.Common.AspNetCore.csproj", "{5D365261-939F-42CE-B02E-BB80681C36DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RHerber.Common.EntityFrameworkCore", "RHerber.Common.EntityFrameworkCore\RHerber.Common.EntityFrameworkCore.csproj", "{5D36B68B-B936-4851-A6C6-AB2C33D46432}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E563628-886B-4965-8BDC-9119A54AF2A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E563628-886B-4965-8BDC-9119A54AF2A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E563628-886B-4965-8BDC-9119A54AF2A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E563628-886B-4965-8BDC-9119A54AF2A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D365261-939F-42CE-B02E-BB80681C36DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D365261-939F-42CE-B02E-BB80681C36DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D365261-939F-42CE-B02E-BB80681C36DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D365261-939F-42CE-B02E-BB80681C36DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D36B68B-B936-4851-A6C6-AB2C33D46432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D36B68B-B936-4851-A6C6-AB2C33D46432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D36B68B-B936-4851-A6C6-AB2C33D46432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D36B68B-B936-4851-A6C6-AB2C33D46432}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

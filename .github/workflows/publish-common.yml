@@ -1,0 +1,29 @@
+name: publish to nuget
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "RHerber.Common/**"
+
+jobs:
+  publish:
+    name: build, pack & publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Use Dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: "6.0.x"
+
+      - name: publish on version change
+        uses: brandedoutcast/publish-nuget@v2
+        with:
+          PROJECT_FILE_PATH: RHerber.Common/RHerber.Common.csproj
+          BUILD_CONFIGURATION: Release
+          NUGET_KEY: ${{ secrets.GITHUB_TOKEN }}
+          NUGET_SOURCE: github
