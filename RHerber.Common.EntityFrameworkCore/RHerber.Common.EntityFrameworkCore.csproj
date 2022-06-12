@@ -15,7 +15,7 @@
     <Copyright>Copyright (c) 2021 Robert Herber. All rights reserved.</Copyright>
     <PackageReleaseNotes>
       1.0.0 - Initial Release.
-      1.1.0 - Upgrade to net6.
+      1.1.0 - Upgrade to .NET 6.
     </PackageReleaseNotes>
   </PropertyGroup>
 
