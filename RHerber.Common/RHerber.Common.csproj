@@ -4,7 +4,7 @@
     <LangVersion>10</LangVersion>
     <PackageId>RHerber.Common</PackageId>
     <RootNamespace>RHerber.Common</RootNamespace>
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
     <Nullable>enable</Nullable>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
@@ -17,6 +17,7 @@
       1.0.0 - Initial Release.
       1.1.0 - Add common models.
       1.2.0 - Upgrade project lang version.
+      1.2.1 - Add README.
     </PackageReleaseNotes>
   </PropertyGroup>
 </Project>

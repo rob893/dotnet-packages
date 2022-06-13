@@ -4,7 +4,7 @@
     <LangVersion>10</LangVersion>
     <PackageId>RHerber.Common.EntityFrameworkCore</PackageId>
     <RootNamespace>RHerber.Common.EntityFrameworkCore</RootNamespace>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <Nullable>enable</Nullable>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
@@ -16,6 +16,7 @@
     <PackageReleaseNotes>
       1.0.0 - Initial Release.
       1.1.0 - Upgrade to .NET 6.
+      1.1.1 - Add README.
     </PackageReleaseNotes>
   </PropertyGroup>
 

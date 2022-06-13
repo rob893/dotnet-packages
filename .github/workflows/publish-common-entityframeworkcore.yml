@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-    # paths:
-    #   - "RHerber.Common.EntityFrameworkCore/**"
+    paths:
+      - "RHerber.Common.EntityFrameworkCore/**"
 
 jobs:
   publish:
@@ -14,5 +14,3 @@ jobs:
       project-path: RHerber.Common.EntityFrameworkCore
       project-name: RHerber.Common.EntityFrameworkCore
     secrets: inherit
-      # package-github-username: ${{ secrets.PACKAGE_GITHUB_USERNAME }}
-      # package-pat: ${{ secrets.PACKAGE_PAT }}
