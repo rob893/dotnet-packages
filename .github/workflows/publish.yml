@@ -13,12 +13,6 @@ on:
         type: string
         required: false
         default: "6.0.x"
-    # secrets:
-    #   package-github-username:
-    #     required: true
-    #   package-pat:
-    #     required: true
-
 
 jobs:
   publish:
@@ -39,11 +33,14 @@ jobs:
         with:
           proj-path: ${{ inputs.project-path }}/${{ inputs.project-name }}.csproj
 
-      - name: Add Github Packages Registry
-        run: dotnet nuget add source -u ${{ secrets.PACKAGE_GITHUB_USERNAME }} -p ${{ secrets.PACKAGE_PAT }} --store-password-in-clear-text -n github "https://nuget.pkg.github.com/rob893/index.json"
+      # - name: Add Github Packages Registry
+      #   run: dotnet nuget add source -u ${{ secrets.PACKAGE_GITHUB_USERNAME }} -p ${{ secrets.PACKAGE_PAT }} --store-password-in-clear-text -n github "https://nuget.pkg.github.com/rob893/index.json"
 
       - name: Pack
         run: cd ${{ inputs.project-path }} && dotnet pack --configuration Release
+        env:
+          PACKAGE_GITHUB_USERNAME: ${{ secrets.PACKAGE_GITHUB_USERNAME }}
+          PACKAGE_PAT: ${{ secrets.PACKAGE_PAT }}
 
       - name: Push Package
         run: |
