@@ -13,3 +13,5 @@ jobs:
     with:
       project-path: RHerber.Common
       project-name: RHerber.Common
+      package-github-username: ${{ secrets.PACKAGE_GITHUB_USERNAME }}
+      package-pat: ${{ secrets.PACKAGE_PAT }}
