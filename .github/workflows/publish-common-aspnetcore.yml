@@ -13,5 +13,6 @@ jobs:
     with:
       project-path: RHerber.Common.AspNetCore
       project-name: RHerber.Common.AspNetCore
-      package-github-username: ${{ secrets.PACKAGE_GITHUB_USERNAME }}
-      package-pat: ${{ secrets.PACKAGE_PAT }}
+    secrets: inherit
+      # package-github-username: ${{ secrets.PACKAGE_GITHUB_USERNAME }}
+      # package-pat: ${{ secrets.PACKAGE_PAT }}

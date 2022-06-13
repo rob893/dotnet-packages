@@ -13,5 +13,6 @@ jobs:
     with:
       project-path: RHerber.Common.EntityFrameworkCore
       project-name: RHerber.Common.EntityFrameworkCore
-      package-github-username: ${{ secrets.PACKAGE_GITHUB_USERNAME }}
-      package-pat: ${{ secrets.PACKAGE_PAT }}
+    secrets: inherit
+      # package-github-username: ${{ secrets.PACKAGE_GITHUB_USERNAME }}
+      # package-pat: ${{ secrets.PACKAGE_PAT }}
