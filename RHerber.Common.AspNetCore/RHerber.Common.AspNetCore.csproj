@@ -4,7 +4,7 @@
     <LangVersion>10</LangVersion>
     <PackageId>RHerber.Common.AspNetCore</PackageId>
     <RootNamespace>RHerber.Common.AspNetCore</RootNamespace>
-    <Version>1.2.1</Version>
+    <Version>1.2.2</Version>
     <Nullable>enable</Nullable>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
@@ -18,8 +18,13 @@
       1.1.0 - Add primitive extensions.
       1.2.0 - Upgrade to net6.
       1.2.1 - Add README.
+      1.2.2 - Add more common classes.
     </PackageReleaseNotes>
   </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0"/>
